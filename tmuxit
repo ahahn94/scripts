@@ -1,0 +1,10 @@
+# Copyright 2017 ahahn94
+# This program is published under the GNU GPL v.2
+#
+# TmuxIt starts a new Tmux-Session with 1 panel in the upper half and 2 in the lower half of the screen.
+#
+#!/bin/sh 
+tmux new-session -d $1
+tmux split-window -v -d $2
+tmux split-window -h -d $3
+tmux attach-session

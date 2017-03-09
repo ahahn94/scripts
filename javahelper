@@ -1,0 +1,17 @@
+# Copyright 2017 ahahn94
+# This program is published under the GNU GPL v.2
+#
+# Javahelper provides an easy way of writing, compiling and executing a java program
+#
+# Javahelper expects a single .java-File as argument
+#
+#!/bin/bash
+Name=`echo "$1" | cut -d'.' -f1` 	# removes the fileextension from the given argument
+vim $1					# opens the file in vim. if it does not exist, it will be created when the file gets saved
+if javac $1; then 			# if the file is successfully compiled using javac
+	echo "Program successfully compiled!";
+	echo
+	java $Name;			# run compiled file
+else 
+	echo "Error! Program not compiled!!!"; 
+fi

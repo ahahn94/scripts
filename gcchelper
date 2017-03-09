@@ -1,0 +1,16 @@
+# Copyright 2017 ahahn94
+# This program is published under the GNU GPL v.2
+#
+# GccHelper provides an easy way of writing, compiling and executing a C-program
+#
+# GccHelper expects one .c-File as argument
+#
+#!/bin/bash
+Name=`echo "$1" | cut -d'.' -f1`	# removes the extension from the filename
+vim $1					# opens the file in vim. if it does not exist, it will be created when saving in vim.
+if gcc $1 -std=c99 -o $Name-AMD64.out $2; then	# if gcc has successfully compiled the file
+	echo "Successfully compiled!";	
+	./$Name-AMD64.out;			# execute program
+else 
+	echo "Error! Program was not compiled!!!"; 
+fi
