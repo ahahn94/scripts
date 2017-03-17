@@ -1,0 +1,12 @@
+# Copyright 2017 ahahn94
+# This program is published under the GNU GPL v.2
+#
+# This program installs the gnome-extension "no topleft hot corner"
+#
+
+#!/bin/bash
+cd ~
+git clone https://github.com/HROMANO/nohotcorner.git
+mv nohotcorner nohotcorner@azuri.free.fr
+mkdir -p .local/share/gnome-shell/extensions
+mv nohotcorner@azuri.free.fr .local/share/gnome-shell/extensions/
