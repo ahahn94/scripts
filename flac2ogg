@@ -1,0 +1,7 @@
+# Copyright 2017 ahahn94
+# This program is published under the GNU GPL v.2
+#
+# flac2ogg uses dir2ogg to convert lossless flac into 192kb/s-ogg-vorbis
+#
+#!/bin/bash
+dir2ogg -f -q6 .
