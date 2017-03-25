@@ -1,0 +1,9 @@
+#!/bin/bash
+
+#create extensions directory
+mkdir ~/.local/share/gnome-shell/extensions
+
+#Install Dash-to-Dock
+wget https://extensions.gnome.org/review/download/6553.shell-extension.zip
+unzip 6553.shell-extension.zip -d ~/.local/share/gnome-shell/extensions/dash-to-dock@micxgx.gmail.com/
+rm 6553.shell-extension.zip
