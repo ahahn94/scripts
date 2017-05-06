@@ -1,0 +1,6 @@
+#Fix RT2501 wifi not connecting on Ubuntu 17.04
+#!/bin/bash
+echo "Run this script with sudo!"
+sudo echo "[device]">>/etc/NetworkManager/NetworkManager.conf
+sudo echo "wifi.scan-rand-mac-address=no">>/etc/NetworkManager/NetworkManager.conf
+sudo service network-manager restart
