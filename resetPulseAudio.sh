@@ -1,3 +1,3 @@
 #!/bin/bash
-rm -r ~/.conf/pulse*
+rm -r ~/.config/pulse*
 pulseaudio -k
