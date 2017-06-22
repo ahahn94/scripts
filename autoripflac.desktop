@@ -2,6 +2,6 @@
 Version=1.0
 Type=Application
 Name=AutoripFLAC
-Exec=/usr/local/bin/autoripFlac.sh %f
+Exec=gnome-terminal -e "/usr/local/bin/autoripFlac.sh %f"
 Categories=Media;
 Terminal=true
