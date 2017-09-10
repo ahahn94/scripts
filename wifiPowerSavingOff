@@ -1,0 +1,8 @@
+# Permanently disable Wifi Power Management
+
+#!/bin/bash
+sudo mkdir -p /etc/NetworkManager/conf.d
+cd /etc/NetworkManager/conf.d
+
+echo "[connection]" >> wifi-powersave-off.conf
+echo "wifi.powersave = 2" >> wifi-powersave-off.conf
