@@ -1,0 +1,14 @@
+# Copyright 2017 ahahn94
+# This program is published under the GNU GPL v.2
+#
+# This program writes the informations of all certificates under /etc/ssl/certs
+# and their filenames to ~/certs.txt, thus enabling you to get the matching 
+# .pem-Filename for a specific certificate.
+#
+#!/bin/bash
+echo > ~/certs.txt #Create file.
+for f in /etc/ssl/certs/*.pem   #Iterate over .pem-Filenames.
+do 
+    echo "Filename: $f" >> ~/certs.txt #Write the filename to the file.
+    openssl x509 -in $f -text >> ~/certs.txt #Write cert-infos under filename.
+done
